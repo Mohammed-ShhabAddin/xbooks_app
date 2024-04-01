@@ -25,51 +25,49 @@ class CustomCardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 4.0),
-      child: Expanded(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Stack(
-              children: [
-                Image.network(
-                  imageUrl,
-                  height: 150,
-                ),
-                Positioned(
-                  top: 8.0,
-                  left: 8.0,
-                  child: Container(
-                    padding: const EdgeInsets.all(4.0),
-                    decoration: BoxDecoration(
-                        color: AppColors.teal,
-                        borderRadius: BorderRadius.circular(5)),
-                    child: Text(
-                      ' $discount %',
-                      style: const TextStyle(color: Colors.white),
-                    ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Stack(
+            children: [
+              Image.network(
+                imageUrl,
+                height: 150,
+              ),
+              Positioned(
+                top: 8.0,
+                left: 8.0,
+                child: Container(
+                  padding: const EdgeInsets.all(4.0),
+                  decoration: BoxDecoration(
+                      color: AppColors.teal,
+                      borderRadius: BorderRadius.circular(5)),
+                  child: Text(
+                    ' $discount %',
+                    style: const TextStyle(color: Colors.white),
                   ),
                 ),
-              ],
-            ),
-            const SizedBox(height: 8.0),
-            Text(
-              name.length > 13 ? '${name.substring(0, 12)}...' : name,
-              style: TextStyles.font16BlackBold,
-            ),
-            const SizedBox(height: 4.0),
-            Text(category, style: TextStyles.font16BlackBold),
-            const SizedBox(height: 4.0),
-            Text(
-              ' $price L.E ',
-              style: const TextStyle(decoration: TextDecoration.lineThrough),
-            ),
-            const SizedBox(height: 4.0),
-            Text(
-              ' ${priceAfterDiscount.toStringAsFixed(2)} L.E',
-              style: TextStyles.font13BlueRegular,
-            ),
-          ],
-        ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 8.0),
+          Text(
+            name.length > 13 ? '${name.substring(0, 12)}...' : name,
+            style: TextStyles.font16BlackBold,
+          ),
+          const SizedBox(height: 4.0),
+          Text(category, style: TextStyles.font16BlackBold),
+          const SizedBox(height: 4.0),
+          Text(
+            ' $price L.E ',
+            style: const TextStyle(decoration: TextDecoration.lineThrough),
+          ),
+          const SizedBox(height: 4.0),
+          Text(
+            ' ${priceAfterDiscount.toStringAsFixed(2)} L.E',
+            style: TextStyles.font13BlueRegular,
+          ),
+        ],
       ),
     );
   }
