@@ -53,13 +53,11 @@ class CustomCardWidget extends StatelessWidget {
             ),
             const SizedBox(height: 8.0),
             Text(
-              name,
-              overflow: TextOverflow.ellipsis,
-              maxLines: 1,
+              name.length > 13 ? '${name.substring(0, 12)}...' : name,
               style: TextStyles.font16BlackBold,
             ),
             const SizedBox(height: 4.0),
-            Text(category),
+            Text(category, style: TextStyles.font16BlackBold),
             const SizedBox(height: 4.0),
             Text(
               ' $price L.E ',
