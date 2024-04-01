@@ -19,7 +19,7 @@ class BestSeller extends StatelessWidget {
             loading: () => const Center(child: CircularProgressIndicator()),
             success: (data) {
               return SizedBox(
-                height: 500,
+                height: 270,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
                   itemCount: data.data?.products.length,
