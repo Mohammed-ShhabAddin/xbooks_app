@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:xbooks_store/core/routing/routes.dart';
+import 'package:xbooks_store/features/books/logic/books_cubit.dart';
+import 'package:xbooks_store/features/books/view/Books_screen.dart';
+import 'package:xbooks_store/features/favorite/view/favorite_screen.dart';
 import 'package:xbooks_store/features/home/logic/home_cubit.dart';
 import 'package:xbooks_store/features/home/view/home_screen.dart';
+import 'package:xbooks_store/features/profile/logic/profile_cubit.dart';
+import 'package:xbooks_store/features/profile/view/editeing_profile_screen.dart';
+import 'package:xbooks_store/features/profile/view/profile_screen.dart';
 
 import '../../features/home/nav_bar.dart';
 import '../../features/login/logic/login_cubit.dart';
@@ -43,6 +49,35 @@ class AppRouter {
           builder: (_) => BlocProvider(
             create: (context) => getIt<HomeCubit>(),
             child: const HomeScreen(),
+          ),
+        );
+
+      case Routes.booksScreen:
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (context) => getIt<BooksCubit>(),
+            child: const BooksScreen(),
+          ),
+        );
+      case Routes.favoriteScreen:
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (context) => getIt<HomeCubit>(),
+            child: const FavoriteScreen(),
+          ),
+        );
+      case Routes.profileScreen:
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (context) => getIt<ProfileCubit>()..emitShowProfileStates(),
+            child: const ProfileScreen(),
+          ),
+        );
+      case Routes.editingProfileScreen:
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (context) => getIt<ProfileCubit>(),
+            child: const EditingProfile(),
           ),
         );
 

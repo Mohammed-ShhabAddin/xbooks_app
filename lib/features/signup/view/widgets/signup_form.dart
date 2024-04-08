@@ -49,7 +49,7 @@ class _SignupFormState extends State<SignupForm> {
         children: [
           //#################### Name Field ####################
           CustomTextFormField(
-            lable: 'Name',
+            label: 'Name',
             hintText: 'name',
             prefixIcon: Icon(
               size: 25.sp,
@@ -69,7 +69,7 @@ class _SignupFormState extends State<SignupForm> {
 
           //#################### Email Field ####################
           CustomTextFormField(
-            lable: 'Email',
+            label: 'Email',
             controller: context.read<SignupCubit>().emailController,
             hintText: 'email',
             prefixIcon: Icon(
@@ -91,7 +91,7 @@ class _SignupFormState extends State<SignupForm> {
 
           //#################### Password Field ####################
           CustomTextFormField(
-            lable: 'Password',
+            label: 'Password',
             controller: context.read<SignupCubit>().passwordController,
             hintText: 'password',
             prefixIcon: Icon(
@@ -125,7 +125,7 @@ class _SignupFormState extends State<SignupForm> {
 
           //#################### Confirm Password Field ####################
           CustomTextFormField(
-            lable: 'Confirm passowrd',
+            label: 'Confirm passowrd',
             controller:
                 context.read<SignupCubit>().passwordConfirmationController,
             hintText: 'rewrite passowrd',

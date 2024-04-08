@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/di/dependency_injection.dart';
 import '../../../../core/widgets/custom_card_widget.dart';
+import '../../../../core/widgets/shimmer_loading.dart';
 import '../../logic/home_cubit.dart';
 import '../../logic/home_state.dart';
 
@@ -16,7 +17,7 @@ class BestSeller extends StatelessWidget {
       child: BlocBuilder<HomeCubit, HomeState>(
         builder: (context, state) {
           return state.maybeWhen(
-            loading: () => const Center(child: CircularProgressIndicator()),
+            loading: () => const ShimmerCardLoading(),
             success: (data) {
               return SizedBox(
                 height: 270,

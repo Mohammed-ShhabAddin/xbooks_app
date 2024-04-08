@@ -30,9 +30,10 @@ Data _$DataFromJson(Map<String, dynamic> json) => Data(
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    )..links = json['links'] == null
-        ? null
-        : Links.fromJson(json['links'] as Map<String, dynamic>);
+      links: json['links'] == null
+          ? null
+          : Links.fromJson(json['links'] as Map<String, dynamic>),
+    );
 
 Map<String, dynamic> _$DataToJson(Data instance) => <String, dynamic>{
       'categories': instance.categories,

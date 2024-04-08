@@ -10,7 +10,7 @@ class XAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppBar(
+    return SliverAppBar(
       toolbarHeight: kToolbarHeight + 50,
       leadingWidth: 30, // Reduce the space for leading widget
       leading: IconButton(

@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:xbooks_store/features/home/logic/home_cubit.dart';
 
 import '../../../../core/di/dependency_injection.dart';
+import '../../../../core/widgets/shimmer_loading.dart';
 import '../../logic/home_state.dart';
 
 class SliderX extends StatelessWidget {
@@ -18,32 +19,29 @@ class SliderX extends StatelessWidget {
       child: BlocBuilder<HomeCubit, HomeState>(
         builder: (context, state) {
           return state.maybeWhen(
-            loading: () => const Center(child: CircularProgressIndicator()),
+            loading: () => const ShimmerSliderLoading(),
             success: (data) {
+              List items = data.data.sliders;
+
               return CarouselSlider.builder(
-                itemCount: data.data?.sliders?.length ?? 0,
-                itemBuilder:
-                    (BuildContext context, int itemIndex, int pageViewIndex) {
-                  return ClipRRect(
-                    borderRadius: BorderRadius.circular(10),
-                    child: Image.network(
-                      data.data!.sliders![itemIndex].image ?? "m",
-                      height: 140,
-                      width: double.infinity,
-                      fit: BoxFit.cover,
-                    ),
-                  );
-                },
+                itemCount: items.length,
                 options: CarouselOptions(
-                  height: 150,
                   viewportFraction: .8,
-                  initialPage: 0,
                   autoPlay: true,
-                  autoPlayCurve: Curves.linear,
                   enlargeCenterPage: true,
                   enlargeFactor: 0.1,
+                  enableInfiniteScroll: true,
+                  height: MediaQuery.of(context).size.height * 0.2,
                   onPageChanged: (index, reason) {},
                 ),
+                itemBuilder: (context, index, realIdx) {
+                  return ClipRRect(
+                      borderRadius: BorderRadius.circular(8.0),
+                      child: Image.network(
+                        items[index].image,
+                        fit: BoxFit.cover,
+                      ));
+                },
               );
             },
             error: (error) {
@@ -59,7 +57,38 @@ class SliderX extends StatelessWidget {
   }
 }
 
-
+/**CarouselSlider.builder(
+                itemCount: items.length,
+                itemBuilder:
+                    (BuildContext context, int itemIndex, int pageViewIndex) {
+                  return ClipRRect(
+                    borderRadius: BorderRadius.circular(8.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8.0),
+                        image: DecorationImage(
+                          image: NetworkImage(
+                            data.data.sliders[itemIndex].image,
+                          ),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  );
+                },
+                options: CarouselOptions(
+                  aspectRatio: 2.0,
+                  height: MediaQuery.of(context).size.height * 0.2,
+                  viewportFraction: .8,
+                  initialPage: 0,
+                  autoPlay: true,
+                  autoPlayCurve: Curves.linear,
+                  enlargeCenterPage: true,
+                  enlargeFactor: 0.1,
+                  enableInfiniteScroll: true,
+                  onPageChanged: (index, reason) {},
+                ),
+              ); */
 /** if (state is Loading) {
           //TODO:change it to shimmer
           return const CircularProgressIndicator();
@@ -95,3 +124,6 @@ class SliderX extends StatelessWidget {
         } else {
           return const Text('something wrong');
         } */
+
+
+        

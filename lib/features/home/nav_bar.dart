@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:xbooks_store/features/home/dummy_home_screen.dart';
 import 'package:xbooks_store/features/home/view/home_screen.dart';
 
 import '../../core/theming/app_colors.dart';
+import '../books/view/Books_screen.dart';
+import '../favorite/view/favorite_screen.dart';
+import '../profile/view/profile_screen.dart';
 
 class NavBarWidget extends StatefulWidget {
   const NavBarWidget({super.key});
@@ -15,10 +19,10 @@ class _NavBarWidgetState extends State<NavBarWidget> {
   int _index = 0;
   List<Widget> navigationScreens = [
     const HomeScreen(),
+    const BooksScreen(),
+    const FavoriteScreen(),
     const DummyHomeScreen(),
-    const DummyHomeScreen(),
-    const DummyHomeScreen(),
-    const DummyHomeScreen(),
+    const ProfileScreen(),
   ];
 
   @override
@@ -26,6 +30,8 @@ class _NavBarWidgetState extends State<NavBarWidget> {
     return Scaffold(
       body: navigationScreens[_index],
       bottomNavigationBar: BottomNavigationBar(
+        selectedLabelStyle:
+            const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
         currentIndex: _index,
         onTap: (value) {
           setState(() {
@@ -33,9 +39,9 @@ class _NavBarWidgetState extends State<NavBarWidget> {
           });
         },
         type: BottomNavigationBarType.shifting,
-        selectedItemColor: AppColors.blueTurquoise,
+        selectedItemColor: AppColors.teal,
         unselectedItemColor: AppColors.greyTaupe,
-        selectedIconTheme: const IconThemeData(color: AppColors.blueTurquoise),
+        selectedIconTheme: const IconThemeData(color: AppColors.teal),
         unselectedIconTheme: const IconThemeData(color: AppColors.greyTaupe),
         items: const [
           BottomNavigationBarItem(

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:xbooks_store/core/theming/styles.dart';
-import 'package:xbooks_store/features/home/view/widgets/best_seller_listview.dart';
+import 'package:xbooks_store/features/home/view/widgets/best_seller_list.dart';
+import 'package:xbooks_store/features/home/view/widgets/new_arrivals_list.dart';
+import 'package:xbooks_store/features/home/view/widgets/segment_header_title.dart';
 import 'package:xbooks_store/features/home/view/widgets/slider.dart';
 
+import 'widgets/categories_list.dart';
 import 'widgets/custom_appbar.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -11,33 +13,42 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const XAppBar(),
-      body: Padding(
-        padding: const EdgeInsets.all(2),
-        child: Column(
-          children: [
-            const SliderX(),
-            const SizedBox(
-              height: 10,
-            ),
-
-            //TODO:extract all rows to separated widget
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      body: CustomScrollView(
+        slivers: [
+          const XAppBar(),
+          SliverToBoxAdapter(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
               children: [
-                Text(
-                  " Best Seller ",
-                  style: TextStyles.font20BlackBold,
+                const SliderX(),
+                const SizedBox(
+                  height: 10,
                 ),
-                const Icon(
-                  Icons.keyboard_arrow_right_sharp,
-                  size: 40,
-                )
+                HeaderTitle(
+                  title: "Best Seller",
+                  onPressed: () {},
+                ),
+                const BestSeller(),
+                const SizedBox(
+                  height: 10,
+                ),
+                HeaderTitle(
+                  title: "Categories",
+                  onPressed: () {},
+                ),
+                const CategoriesX(),
+                const SizedBox(
+                  height: 10,
+                ),
+                HeaderTitle(
+                  title: "New Arrivals",
+                  onPressed: () {},
+                ),
+                const NewArrivals()
               ],
             ),
-            const BestSeller(),
-          ],
-        ),
+          )
+        ],
       ),
     );
   }

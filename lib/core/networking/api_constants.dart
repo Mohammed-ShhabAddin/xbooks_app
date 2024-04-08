@@ -4,11 +4,21 @@ class ApiConstants {
   static const String login = "/login";
   static const String signup = "/register";
 
-// related to home screen
+// related to home fature
   static const String slider = "/sliders";
   static const String productBestSeller = "/products-bestseller";
   static const String productNewArrivals = "/products-new-arrivals";
   static const String categories = "/categories";
+
+  //related to Book fature
+  static const String products = "/products";
+  static const String productsSearch = "/products-search";
+
+  //related to profile fature
+  static const String profile = "/profile";
+  static const String updateProfile = "/update-profile";
+  static const String updatePassword = "/update-password";
+  static const String deleteProfile = "/delete-profile";
 }
 
 //dart run build_runner build --delete-conflicting-outputs

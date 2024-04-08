@@ -54,7 +54,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
           child: Column(
             children: [
               CustomTextFormField(
-                lable: 'Email',
+                label: 'Email',
                 hintText: 'Email',
                 controller: context.read<LoginCubit>().emailController,
                 prefixIcon: Icon(
@@ -72,7 +72,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
               ),
               verticalSpace(25),
               CustomTextFormField(
-                lable: "Password",
+                label: "Password",
                 controller: context.read<LoginCubit>().passwordController,
                 hintText: "password",
                 isObscureText: isObscureText,

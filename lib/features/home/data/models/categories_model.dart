@@ -21,7 +21,7 @@ class Data {
   Meta? meta;
   Links? links;
 
-  Data({this.categories, this.meta});
+  Data({this.categories, this.meta, this.links});
 
   factory Data.fromJson(Map<String, dynamic> json) => _$DataFromJson(json);
 }

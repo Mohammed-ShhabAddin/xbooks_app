@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../theming/app_colors.dart';
 
@@ -13,7 +14,8 @@ class CustomTextFormField extends StatelessWidget {
   final Widget? suffixIcon;
   final Widget? prefixIcon;
   final Color? backgroundColor;
-  final String lable;
+  final String label;
+  final bool? readOnly;
 
   final TextEditingController? controller;
   final Function(String?) validator;
@@ -31,23 +33,26 @@ class CustomTextFormField extends StatelessWidget {
       this.backgroundColor,
       this.controller,
       required this.validator,
-      required this.lable,
-      this.prefixIcon});
+      required this.label,
+      this.prefixIcon,
+      this.readOnly});
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      readOnly: readOnly ?? false,
       controller: controller,
 
       decoration: InputDecoration(
+        floatingLabelBehavior: FloatingLabelBehavior.always,
+
         label: Text(
-          lable,
-          style: const TextStyle(color: AppColors.teal, fontSize: 18),
+          label,
+          style: TextStyle(color: AppColors.teal, fontSize: 22.sp),
         ),
         isDense: true,
         contentPadding: contentPadding ??
-            const EdgeInsets.symmetric(
-                horizontal: 20 /*.w*/, vertical: 18 /*.h*/),
+            EdgeInsets.symmetric(horizontal: 20.w, vertical: 18.h),
         focusedBorder: focusedBorder ??
             OutlineInputBorder(
               borderSide: const BorderSide(
