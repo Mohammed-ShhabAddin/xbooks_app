@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:xbooks_store/core/helper/extension.dart';
+import 'package:xbooks_store/core/routing/routes.dart';
 
 import '../../../../core/di/dependency_injection.dart';
 import '../../../../core/widgets/custom_card_widget.dart';
@@ -28,7 +30,8 @@ class BestSeller extends StatelessWidget {
                     var item = data.data?.products?[index];
                     return InkWell(
                       onTap: () {
-                        //TODO:navigate to details screen
+                        context.pushNamed(Routes.bestsellerBookDetailsScreen,
+                            arguments: item);
                       },
                       child: Container(
                           margin: const EdgeInsets.only(bottom: 10),

@@ -71,10 +71,20 @@ class ProfileScreen extends StatelessWidget {
                       ),
                       CustomProfileFormField(
                         name: response.data!.name!,
+                        nameController:
+                            context.read<ProfileCubit>().nameController,
                         email: response.data!.email!,
+                        emailController:
+                            context.read<ProfileCubit>().emailController,
                         phone: response.data!.phone ?? "phone",
+                        phoneController:
+                            context.read<ProfileCubit>().phoneController,
                         city: response.data!.city ?? "City",
+                        cityController:
+                            context.read<ProfileCubit>().cityController,
                         address: response.data!.address ?? "Address",
+                        addressController:
+                            context.read<ProfileCubit>().addressController,
                         readOnly: true,
                       ),
                       CustomElevatedButton(

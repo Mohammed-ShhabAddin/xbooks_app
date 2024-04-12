@@ -4,6 +4,8 @@ import 'package:xbooks_store/features/books/data/repo/books_repo.dart';
 import 'package:xbooks_store/features/books/logic/books_cubit.dart';
 import 'package:xbooks_store/features/home/data/repo/home_repo.dart';
 import 'package:xbooks_store/features/home/logic/home_cubit.dart';
+import 'package:xbooks_store/features/home/view/bestseller_details_screen.dart';
+import 'package:xbooks_store/features/home/view/new_arrivals_details_screen.dart';
 
 import '../../features/login/data/repo/login_repo.dart';
 import '../../features/login/logic/login_cubit.dart';
@@ -42,4 +44,11 @@ Future<void> setupGetIt() async {
   //Profile
   getIt.registerLazySingleton<ProfileRepo>(() => ProfileRepo(getIt()));
   getIt.registerFactory<ProfileCubit>(() => ProfileCubit(getIt()));
+
+  //Detail screen
+  getIt.registerFactory<BestSellerBookDetailsScreen>(
+      () => BestSellerBookDetailsScreen(item: getIt()));
+  //Detail screen
+  getIt.registerFactory<NewArrivalsBookDetailsScreen>(
+      () => NewArrivalsBookDetailsScreen(item: getIt()));
 }

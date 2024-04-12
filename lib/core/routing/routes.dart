@@ -1,5 +1,8 @@
 class Routes {
   static const String homeScreen = '/homeScreen';
+  static const String bestsellerBookDetailsScreen = '/bookDetailsScreen';
+  static const String newArrivalsBookDetailsScreen =
+      '/newArrivalsBookDetailsScreen';
 
   static const String booksScreen = '/booksScreen';
 

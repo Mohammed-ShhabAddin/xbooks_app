@@ -14,8 +14,11 @@ class ProfileRepo {
       {required String token, required UpdateProfileRequestBody body}) async {
     try {
       final response = await _apiService.updateProfile(token, body);
+      print("API Result Success KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK");
       return ApiResult.success(response);
     } catch (error) {
+      print("API Result failure vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv");
+
       return ApiResult.failure(ErrorHandler.handle(error));
     }
   }

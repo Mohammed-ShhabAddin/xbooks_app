@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:xbooks_store/core/helper/extension.dart';
 
 import '../../../../core/di/dependency_injection.dart';
+import '../../../../core/routing/routes.dart';
 import '../../../../core/widgets/custom_card_widget.dart';
 import '../../../../core/widgets/shimmer_loading.dart';
 import '../../logic/home_cubit.dart';
@@ -29,7 +31,8 @@ class NewArrivals extends StatelessWidget {
                     var item = data.data?.products?[index];
                     return InkWell(
                       onTap: () {
-                        //TODO:navigate to details screen
+                        context.pushNamed(Routes.newArrivalsBookDetailsScreen,
+                            arguments: item);
                       },
                       child: Container(
                           margin: const EdgeInsets.only(bottom: 10),

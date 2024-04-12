@@ -9,9 +9,10 @@ part 'update_profile_request_body.g.dart';
   converters: [MultipartFileConverter()],
 )
 class UpdateProfileRequestBody {
-  @JsonKey(name: 'files')
-  final List<MultipartFile> files;
   final String name;
+
+  @JsonKey(name: 'image')
+  final List<MultipartFile> files;
   final String address;
   final String city;
   final String phone;
@@ -27,6 +28,4 @@ class UpdateProfileRequestBody {
       _$UpdateProfileRequestBodyFromJson(json);
 
   Map<String, dynamic> toJson() => _$UpdateProfileRequestBodyToJson(this);
-
-  List<String?> get filePaths => files.map((file) => file.filename).toList();
 }

@@ -5,10 +5,16 @@ import '../../../../core/theming/app_colors.dart';
 
 class CustomProfileFormField extends StatelessWidget {
   final String name;
+  final TextEditingController? nameController;
   final String email;
+  final TextEditingController? emailController;
+
   final String? phone;
+  final TextEditingController? phoneController;
   final String? city;
+  final TextEditingController? cityController;
   final String? address;
+  final TextEditingController? addressController;
   final bool? readOnly;
 
   const CustomProfileFormField(
@@ -18,7 +24,12 @@ class CustomProfileFormField extends StatelessWidget {
       this.phone,
       this.city,
       this.address,
-      this.readOnly});
+      this.readOnly,
+      this.nameController,
+      this.phoneController,
+      this.cityController,
+      this.addressController,
+      this.emailController});
 
   @override
   Widget build(BuildContext context) {
@@ -36,12 +47,16 @@ class CustomProfileFormField extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            textFormFiled("name", Icons.person, name, readOnly!),
-            textFormFiled("email", Icons.email, email, readOnly!),
-            textFormFiled("phone", Icons.phone, phone!, readOnly!),
             textFormFiled(
-                "city", Icons.location_city_outlined, city!, readOnly!),
-            textFormFiled("address", Icons.location_on, address!, readOnly!),
+                "name", Icons.person, name, readOnly!, nameController!),
+            textFormFiled(
+                "email", Icons.email, email, readOnly!, emailController!),
+            textFormFiled(
+                "phone", Icons.phone, phone!, readOnly!, phoneController!),
+            textFormFiled("city", Icons.location_city_outlined, city!,
+                readOnly!, cityController!),
+            textFormFiled("address", Icons.location_on, address!, readOnly!,
+                addressController!),
           ],
         ),
       ),
@@ -49,11 +64,12 @@ class CustomProfileFormField extends StatelessWidget {
   }
 }
 
-Widget textFormFiled(
-    String label, IconData prefixIcon, String hintText, bool readOnly) {
+Widget textFormFiled(String label, IconData prefixIcon, String hintText,
+    bool readOnly, TextEditingController? controller) {
   return Container(
     margin: const EdgeInsets.all(5),
     child: TextFormField(
+      controller: controller,
       readOnly: readOnly,
       decoration: InputDecoration(
         labelText: label,

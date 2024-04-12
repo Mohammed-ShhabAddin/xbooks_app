@@ -87,6 +87,11 @@ class TextStyles {
     fontWeight: FontWeightHelper.medium,
     color: AppColors.greyTaupe,
   );
+  static TextStyle font18GrayBold = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: AppColors.greyTaupe,
+  );
   static TextStyle font20GrayRegular = TextStyle(
     fontSize: 20.sp,
     fontWeight: FontWeightHelper.regular,

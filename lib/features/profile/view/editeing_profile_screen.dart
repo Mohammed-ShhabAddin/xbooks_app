@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:xbooks_store/core/di/dependency_injection.dart';
 import 'package:xbooks_store/core/helper/extension.dart';
-import 'package:xbooks_store/core/routing/routes.dart';
 import 'package:xbooks_store/core/widgets/custom_elevated_button.dart';
 import 'package:xbooks_store/features/profile/logic/profile_state.dart';
 import 'package:xbooks_store/features/profile/view/widgets/custom_curved_shape.dart';
@@ -62,7 +61,6 @@ class EditingProfile extends StatelessWidget {
                         ),
                         Stack(
                           children: [
-                            // Your existing CircleAvatar
                             CircleAvatar(
                               radius: 80.r,
                               backgroundColor: Colors.white,
@@ -84,7 +82,12 @@ class EditingProfile extends StatelessWidget {
                                   shape: BoxShape.circle,
                                 ),
                                 child: IconButton(
-                                  onPressed: () {},
+                                  onPressed: () async {
+                                    context.read<ProfileCubit>().imagePath =
+                                        await context
+                                            .read<ProfileCubit>()
+                                            .uploadImageFromGallery();
+                                  },
                                   icon: Icon(
                                     Icons.camera_alt,
                                     color: Colors.white,
@@ -96,20 +99,37 @@ class EditingProfile extends StatelessWidget {
                           ],
                         ),
                         CustomProfileFormField(
-                          name: response.data!.name!,
-                          email: response.data!.email!,
-                          phone: response.data!.phone ?? "phone",
-                          city: response.data!.city ?? "City",
-                          address: response.data!.address ?? "Address",
                           readOnly: false,
+                          name: response.data!.name!,
+                          nameController:
+                              context.read<ProfileCubit>().nameController,
+                          email: response.data!.email!,
+                          emailController:
+                              context.read<ProfileCubit>().emailController,
+                          phone: response.data!.phone ?? "phone",
+                          phoneController:
+                              context.read<ProfileCubit>().phoneController,
+                          city: response.data!.city ?? "City",
+                          cityController:
+                              context.read<ProfileCubit>().cityController,
+                          address: response.data!.address ?? "Address",
+                          addressController:
+                              context.read<ProfileCubit>().addressController,
                         ),
                         CustomElevatedButton(
                           onPressed: () {
-                            context.pushNamed(Routes.editingProfileScreen);
+                            print(
+                                "name name name name name name ${context.read<ProfileCubit>().nameController.text}");
+
+                            context
+                                .read<ProfileCubit>()
+                                .emitUpdateProfileStates();
+
+                            //context.pop();
                           },
                           width: MediaQuery.of(context).size.width * 0.92,
                           hight: 50.h,
-                          text: "Edite ",
+                          text: "Confirm ",
                         )
                       ],
                     ),

@@ -9,7 +9,7 @@ part of 'update_profile_request_body.dart';
 UpdateProfileRequestBody _$UpdateProfileRequestBodyFromJson(
         Map<String, dynamic> json) =>
     UpdateProfileRequestBody(
-      files: (json['files'] as List<dynamic>)
+      files: (json['image'] as List<dynamic>)
           .map((e) => const MultipartFileConverter().fromJson(e as String))
           .toList(),
       name: json['name'] as String,
@@ -21,9 +21,9 @@ UpdateProfileRequestBody _$UpdateProfileRequestBodyFromJson(
 Map<String, dynamic> _$UpdateProfileRequestBodyToJson(
         UpdateProfileRequestBody instance) =>
     <String, dynamic>{
-      'files':
-          instance.files.map(const MultipartFileConverter().toJson).toList(),
       'name': instance.name,
+      'image':
+          instance.files.map(const MultipartFileConverter().toJson).toList(),
       'address': instance.address,
       'city': instance.city,
       'phone': instance.phone,

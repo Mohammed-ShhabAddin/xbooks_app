@@ -2,6 +2,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class AppLocal {
   static String token = 'TOKEN'; //user token
+  static String imageKey = 'IMAGEKEY'; //profile image
 
   static cacheDataX(String key, value) async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
