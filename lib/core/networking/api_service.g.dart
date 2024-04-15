@@ -247,17 +247,13 @@ class _ApiService implements ApiService {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{r'Authorization': token};
     _headers.removeWhere((k, v) => v == null);
-    final _data = FormData();
-    _data.fields.add(MapEntry(
-      'body',
-      jsonEncode(body),
-    ));
+    final _data = <String, dynamic>{};
+    _data.addAll(body.toJson());
     final _result =
         await _dio.fetch<Map<String, dynamic>>(_setStreamType<Profile>(Options(
       method: 'POST',
       headers: _headers,
       extra: _extra,
-      contentType: 'multipart/form-data',
     )
             .compose(
               _dio.options,

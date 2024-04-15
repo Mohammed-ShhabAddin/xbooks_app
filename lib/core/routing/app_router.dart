@@ -14,6 +14,7 @@ import 'package:xbooks_store/features/profile/view/editeing_profile_screen.dart'
 import 'package:xbooks_store/features/profile/view/profile_screen.dart';
 import 'package:xbooks_store/features/home/data/models/products/new_arrivals.dart'
     as newarrival;
+import 'package:xbooks_store/features/profile/view/update_profile_screen.dart';
 
 import '../../features/home/nav_bar.dart';
 import '../../features/login/logic/login_cubit.dart';
@@ -103,6 +104,13 @@ class AppRouter {
           builder: (_) => BlocProvider(
             create: (context) => getIt<ProfileCubit>(),
             child: const EditingProfile(),
+          ),
+        );
+      case Routes.updateProfileScreen:
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (context) => getIt<ProfileCubit>(),
+            child: const UpdateProfileScreen(),
           ),
         );
 

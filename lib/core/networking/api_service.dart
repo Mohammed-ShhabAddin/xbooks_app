@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 import 'package:xbooks_store/features/home/data/models/products/bestseller_model.dart';
@@ -60,12 +58,19 @@ abstract class ApiService {
   @GET(ApiConstants.productsSearch)
   Future<Products> getByNameSearchedBooks(@Query('name') String name);
 
+// // --------------  update profile-------------- //
+//   @POST(ApiConstants.updateProfile)
+//   @MultiPart()
+//   Future<Profile> updateProfile(
+//     @Header('Authorization') String token,
+//     @Part() UpdateProfileRequestBody body,
+//   );
+
 // --------------  update profile-------------- //
   @POST(ApiConstants.updateProfile)
-  @MultiPart()
   Future<Profile> updateProfile(
     @Header('Authorization') String token,
-    @Part() UpdateProfileRequestBody body,
+    @Body() UpdateProfileRequestBody body,
   );
 // --------------  show profile-------------- //
   @GET(ApiConstants.profile)

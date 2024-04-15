@@ -1,18 +1,29 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:xbooks_store/core/di/dependency_injection.dart';
+import 'package:xbooks_store/core/theming/app_colors.dart';
+import 'package:xbooks_store/core/theming/styles.dart';
 import 'package:xbooks_store/core/widgets/custom_elevated_button.dart';
+import 'package:xbooks_store/features/profile/logic/profile_cubit.dart';
 import 'package:xbooks_store/features/profile/logic/profile_state.dart';
 import 'package:xbooks_store/features/profile/view/widgets/custom_curved_shape.dart';
 import 'package:xbooks_store/features/profile/view/widgets/custom_profile_form_field.dart';
 
-import '../../../core/theming/app_colors.dart';
-import '../../../core/theming/styles.dart';
-import '../logic/profile_cubit.dart';
+class UpdateProfileScreen extends StatefulWidget {
+  const UpdateProfileScreen({super.key});
 
-class EditingProfile extends StatelessWidget {
-  const EditingProfile({super.key});
+  @override
+  State<UpdateProfileScreen> createState() => _UpdateProfileScreenState();
+}
+
+class _UpdateProfileScreenState extends State<UpdateProfileScreen> {
+  @override
+  void initState() {
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -21,8 +32,6 @@ class EditingProfile extends StatelessWidget {
         create: (context) => getIt<ProfileCubit>()..emitShowProfileStates(),
         child: SingleChildScrollView(
           child: BlocBuilder<ProfileCubit, ProfileState>(
-            // child: BlocBuilder<ProfileCubit, ProfileState<Profile>>(
-
             builder: (context, state) {
               return state.maybeWhen(
                 profileLoading: () => Center(
@@ -68,11 +77,40 @@ class EditingProfile extends StatelessWidget {
                               CircleAvatar(
                                 radius: 80.r,
                                 backgroundColor: Colors.white,
-                                child: CircleAvatar(
-                                  radius: 75.r,
-                                  backgroundImage: NetworkImage(
-                                    response.data!.image!,
-                                  ),
+                                child: BlocBuilder<ProfileCubit, ProfileState>(
+                                  builder: (context, state) {
+                                    return state.maybeWhen(
+                                      imagePickingSuccess: (data) {
+                                        return CircleAvatar(
+                                          radius: 75.r,
+                                          backgroundImage: (context
+                                                      .watch<ProfileCubit>()
+                                                      .imagePath !=
+                                                  null)
+                                              ? FileImage(File(context
+                                                      .watch<ProfileCubit>()
+                                                      .imagePath!))
+                                                  as ImageProvider<Object>?
+                                              : NetworkImage(
+                                                      response.data!.image!)
+                                                  as ImageProvider<Object>?,
+                                        );
+                                      },
+                                      orElse: () {
+                                        return CircleAvatar(
+                                          radius: 75.r,
+                                          backgroundImage: NetworkImage(
+                                                  response.data!.image!)
+                                              as ImageProvider<Object>?,
+                                        );
+                                      },
+                                      imagePickingError: (error) {
+                                        return Center(
+                                          child: Text("error $error"),
+                                        );
+                                      },
+                                    );
+                                  },
                                 ),
                               ),
                               Positioned(

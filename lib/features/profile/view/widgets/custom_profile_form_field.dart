@@ -48,15 +48,35 @@ class CustomProfileFormField extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             textFormFiled(
-                "name", Icons.person, name, readOnly!, nameController!),
+                label: "name",
+                prefixIcon: Icons.person,
+                hintText: name,
+                readOnly: readOnly!,
+                controller: nameController!),
             textFormFiled(
-                "email", Icons.email, email, readOnly!, emailController!),
+                label: "email",
+                prefixIcon: Icons.email,
+                hintText: email,
+                readOnly: readOnly!,
+                controller: emailController!),
             textFormFiled(
-                "phone", Icons.phone, phone!, readOnly!, phoneController!),
-            textFormFiled("city", Icons.location_city_outlined, city!,
-                readOnly!, cityController!),
-            textFormFiled("address", Icons.location_on, address!, readOnly!,
-                addressController!),
+                label: "phone",
+                prefixIcon: Icons.phone,
+                hintText: phone!,
+                readOnly: readOnly!,
+                controller: phoneController!),
+            textFormFiled(
+                label: "city",
+                prefixIcon: Icons.location_city_outlined,
+                hintText: city!,
+                readOnly: readOnly!,
+                controller: cityController!),
+            textFormFiled(
+                label: "address",
+                prefixIcon: Icons.location_on,
+                hintText: address!,
+                readOnly: readOnly!,
+                controller: addressController!),
           ],
         ),
       ),
@@ -64,8 +84,12 @@ class CustomProfileFormField extends StatelessWidget {
   }
 }
 
-Widget textFormFiled(String label, IconData prefixIcon, String hintText,
-    bool readOnly, TextEditingController? controller) {
+Widget textFormFiled(
+    {required String label,
+    required IconData prefixIcon,
+    required String hintText,
+    required bool readOnly,
+    required TextEditingController? controller}) {
   return Container(
     margin: const EdgeInsets.all(5),
     child: TextFormField(

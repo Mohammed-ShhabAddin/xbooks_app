@@ -16,4 +16,10 @@ class ProfileState<T> with _$ProfileState<T> {
       ProfileUpdateSuccess<T>;
   const factory ProfileState.profileUpdateError({required String error}) =
       ProfileUpdateError;
+
+  const factory ProfileState.imagePickingLoading() = ImagePickingLoading;
+  const factory ProfileState.imagePickingSuccess(T data) =
+      ImagePickingSuccess<T>;
+  const factory ProfileState.imagePickingError({required String error}) =
+      ImagePickingError;
 }

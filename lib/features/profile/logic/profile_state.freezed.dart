@@ -25,6 +25,9 @@ mixin _$ProfileState<T> {
     required TResult Function() profileUpdateLoading,
     required TResult Function(T data) profileUpdateSuccess,
     required TResult Function(String error) profileUpdateError,
+    required TResult Function() imagePickingLoading,
+    required TResult Function(T data) imagePickingSuccess,
+    required TResult Function(String error) imagePickingError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -36,6 +39,9 @@ mixin _$ProfileState<T> {
     TResult? Function()? profileUpdateLoading,
     TResult? Function(T data)? profileUpdateSuccess,
     TResult? Function(String error)? profileUpdateError,
+    TResult? Function()? imagePickingLoading,
+    TResult? Function(T data)? imagePickingSuccess,
+    TResult? Function(String error)? imagePickingError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -47,6 +53,9 @@ mixin _$ProfileState<T> {
     TResult Function()? profileUpdateLoading,
     TResult Function(T data)? profileUpdateSuccess,
     TResult Function(String error)? profileUpdateError,
+    TResult Function()? imagePickingLoading,
+    TResult Function(T data)? imagePickingSuccess,
+    TResult Function(String error)? imagePickingError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -61,6 +70,9 @@ mixin _$ProfileState<T> {
     required TResult Function(ProfileUpdateSuccess<T> value)
         profileUpdateSuccess,
     required TResult Function(ProfileUpdateError<T> value) profileUpdateError,
+    required TResult Function(ImagePickingLoading<T> value) imagePickingLoading,
+    required TResult Function(ImagePickingSuccess<T> value) imagePickingSuccess,
+    required TResult Function(ImagePickingError<T> value) imagePickingError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -72,6 +84,9 @@ mixin _$ProfileState<T> {
     TResult? Function(ProfileUpdateLoading<T> value)? profileUpdateLoading,
     TResult? Function(ProfileUpdateSuccess<T> value)? profileUpdateSuccess,
     TResult? Function(ProfileUpdateError<T> value)? profileUpdateError,
+    TResult? Function(ImagePickingLoading<T> value)? imagePickingLoading,
+    TResult? Function(ImagePickingSuccess<T> value)? imagePickingSuccess,
+    TResult? Function(ImagePickingError<T> value)? imagePickingError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -83,6 +98,9 @@ mixin _$ProfileState<T> {
     TResult Function(ProfileUpdateLoading<T> value)? profileUpdateLoading,
     TResult Function(ProfileUpdateSuccess<T> value)? profileUpdateSuccess,
     TResult Function(ProfileUpdateError<T> value)? profileUpdateError,
+    TResult Function(ImagePickingLoading<T> value)? imagePickingLoading,
+    TResult Function(ImagePickingSuccess<T> value)? imagePickingSuccess,
+    TResult Function(ImagePickingError<T> value)? imagePickingError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -151,6 +169,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function() profileUpdateLoading,
     required TResult Function(T data) profileUpdateSuccess,
     required TResult Function(String error) profileUpdateError,
+    required TResult Function() imagePickingLoading,
+    required TResult Function(T data) imagePickingSuccess,
+    required TResult Function(String error) imagePickingError,
   }) {
     return initial();
   }
@@ -165,6 +186,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function()? profileUpdateLoading,
     TResult? Function(T data)? profileUpdateSuccess,
     TResult? Function(String error)? profileUpdateError,
+    TResult? Function()? imagePickingLoading,
+    TResult? Function(T data)? imagePickingSuccess,
+    TResult? Function(String error)? imagePickingError,
   }) {
     return initial?.call();
   }
@@ -179,6 +203,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function()? profileUpdateLoading,
     TResult Function(T data)? profileUpdateSuccess,
     TResult Function(String error)? profileUpdateError,
+    TResult Function()? imagePickingLoading,
+    TResult Function(T data)? imagePickingSuccess,
+    TResult Function(String error)? imagePickingError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -199,6 +226,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(ProfileUpdateSuccess<T> value)
         profileUpdateSuccess,
     required TResult Function(ProfileUpdateError<T> value) profileUpdateError,
+    required TResult Function(ImagePickingLoading<T> value) imagePickingLoading,
+    required TResult Function(ImagePickingSuccess<T> value) imagePickingSuccess,
+    required TResult Function(ImagePickingError<T> value) imagePickingError,
   }) {
     return initial(this);
   }
@@ -213,6 +243,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(ProfileUpdateLoading<T> value)? profileUpdateLoading,
     TResult? Function(ProfileUpdateSuccess<T> value)? profileUpdateSuccess,
     TResult? Function(ProfileUpdateError<T> value)? profileUpdateError,
+    TResult? Function(ImagePickingLoading<T> value)? imagePickingLoading,
+    TResult? Function(ImagePickingSuccess<T> value)? imagePickingSuccess,
+    TResult? Function(ImagePickingError<T> value)? imagePickingError,
   }) {
     return initial?.call(this);
   }
@@ -227,6 +260,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(ProfileUpdateLoading<T> value)? profileUpdateLoading,
     TResult Function(ProfileUpdateSuccess<T> value)? profileUpdateSuccess,
     TResult Function(ProfileUpdateError<T> value)? profileUpdateError,
+    TResult Function(ImagePickingLoading<T> value)? imagePickingLoading,
+    TResult Function(ImagePickingSuccess<T> value)? imagePickingSuccess,
+    TResult Function(ImagePickingError<T> value)? imagePickingError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -285,6 +321,9 @@ class _$ProfileLoadingImpl<T> implements ProfileLoading<T> {
     required TResult Function() profileUpdateLoading,
     required TResult Function(T data) profileUpdateSuccess,
     required TResult Function(String error) profileUpdateError,
+    required TResult Function() imagePickingLoading,
+    required TResult Function(T data) imagePickingSuccess,
+    required TResult Function(String error) imagePickingError,
   }) {
     return profileLoading();
   }
@@ -299,6 +338,9 @@ class _$ProfileLoadingImpl<T> implements ProfileLoading<T> {
     TResult? Function()? profileUpdateLoading,
     TResult? Function(T data)? profileUpdateSuccess,
     TResult? Function(String error)? profileUpdateError,
+    TResult? Function()? imagePickingLoading,
+    TResult? Function(T data)? imagePickingSuccess,
+    TResult? Function(String error)? imagePickingError,
   }) {
     return profileLoading?.call();
   }
@@ -313,6 +355,9 @@ class _$ProfileLoadingImpl<T> implements ProfileLoading<T> {
     TResult Function()? profileUpdateLoading,
     TResult Function(T data)? profileUpdateSuccess,
     TResult Function(String error)? profileUpdateError,
+    TResult Function()? imagePickingLoading,
+    TResult Function(T data)? imagePickingSuccess,
+    TResult Function(String error)? imagePickingError,
     required TResult orElse(),
   }) {
     if (profileLoading != null) {
@@ -333,6 +378,9 @@ class _$ProfileLoadingImpl<T> implements ProfileLoading<T> {
     required TResult Function(ProfileUpdateSuccess<T> value)
         profileUpdateSuccess,
     required TResult Function(ProfileUpdateError<T> value) profileUpdateError,
+    required TResult Function(ImagePickingLoading<T> value) imagePickingLoading,
+    required TResult Function(ImagePickingSuccess<T> value) imagePickingSuccess,
+    required TResult Function(ImagePickingError<T> value) imagePickingError,
   }) {
     return profileLoading(this);
   }
@@ -347,6 +395,9 @@ class _$ProfileLoadingImpl<T> implements ProfileLoading<T> {
     TResult? Function(ProfileUpdateLoading<T> value)? profileUpdateLoading,
     TResult? Function(ProfileUpdateSuccess<T> value)? profileUpdateSuccess,
     TResult? Function(ProfileUpdateError<T> value)? profileUpdateError,
+    TResult? Function(ImagePickingLoading<T> value)? imagePickingLoading,
+    TResult? Function(ImagePickingSuccess<T> value)? imagePickingSuccess,
+    TResult? Function(ImagePickingError<T> value)? imagePickingError,
   }) {
     return profileLoading?.call(this);
   }
@@ -361,6 +412,9 @@ class _$ProfileLoadingImpl<T> implements ProfileLoading<T> {
     TResult Function(ProfileUpdateLoading<T> value)? profileUpdateLoading,
     TResult Function(ProfileUpdateSuccess<T> value)? profileUpdateSuccess,
     TResult Function(ProfileUpdateError<T> value)? profileUpdateError,
+    TResult Function(ImagePickingLoading<T> value)? imagePickingLoading,
+    TResult Function(ImagePickingSuccess<T> value)? imagePickingSuccess,
+    TResult Function(ImagePickingError<T> value)? imagePickingError,
     required TResult orElse(),
   }) {
     if (profileLoading != null) {
@@ -447,6 +501,9 @@ class _$ProfileSuccessImpl<T> implements ProfileSuccess<T> {
     required TResult Function() profileUpdateLoading,
     required TResult Function(T data) profileUpdateSuccess,
     required TResult Function(String error) profileUpdateError,
+    required TResult Function() imagePickingLoading,
+    required TResult Function(T data) imagePickingSuccess,
+    required TResult Function(String error) imagePickingError,
   }) {
     return profileSuccess(data);
   }
@@ -461,6 +518,9 @@ class _$ProfileSuccessImpl<T> implements ProfileSuccess<T> {
     TResult? Function()? profileUpdateLoading,
     TResult? Function(T data)? profileUpdateSuccess,
     TResult? Function(String error)? profileUpdateError,
+    TResult? Function()? imagePickingLoading,
+    TResult? Function(T data)? imagePickingSuccess,
+    TResult? Function(String error)? imagePickingError,
   }) {
     return profileSuccess?.call(data);
   }
@@ -475,6 +535,9 @@ class _$ProfileSuccessImpl<T> implements ProfileSuccess<T> {
     TResult Function()? profileUpdateLoading,
     TResult Function(T data)? profileUpdateSuccess,
     TResult Function(String error)? profileUpdateError,
+    TResult Function()? imagePickingLoading,
+    TResult Function(T data)? imagePickingSuccess,
+    TResult Function(String error)? imagePickingError,
     required TResult orElse(),
   }) {
     if (profileSuccess != null) {
@@ -495,6 +558,9 @@ class _$ProfileSuccessImpl<T> implements ProfileSuccess<T> {
     required TResult Function(ProfileUpdateSuccess<T> value)
         profileUpdateSuccess,
     required TResult Function(ProfileUpdateError<T> value) profileUpdateError,
+    required TResult Function(ImagePickingLoading<T> value) imagePickingLoading,
+    required TResult Function(ImagePickingSuccess<T> value) imagePickingSuccess,
+    required TResult Function(ImagePickingError<T> value) imagePickingError,
   }) {
     return profileSuccess(this);
   }
@@ -509,6 +575,9 @@ class _$ProfileSuccessImpl<T> implements ProfileSuccess<T> {
     TResult? Function(ProfileUpdateLoading<T> value)? profileUpdateLoading,
     TResult? Function(ProfileUpdateSuccess<T> value)? profileUpdateSuccess,
     TResult? Function(ProfileUpdateError<T> value)? profileUpdateError,
+    TResult? Function(ImagePickingLoading<T> value)? imagePickingLoading,
+    TResult? Function(ImagePickingSuccess<T> value)? imagePickingSuccess,
+    TResult? Function(ImagePickingError<T> value)? imagePickingError,
   }) {
     return profileSuccess?.call(this);
   }
@@ -523,6 +592,9 @@ class _$ProfileSuccessImpl<T> implements ProfileSuccess<T> {
     TResult Function(ProfileUpdateLoading<T> value)? profileUpdateLoading,
     TResult Function(ProfileUpdateSuccess<T> value)? profileUpdateSuccess,
     TResult Function(ProfileUpdateError<T> value)? profileUpdateError,
+    TResult Function(ImagePickingLoading<T> value)? imagePickingLoading,
+    TResult Function(ImagePickingSuccess<T> value)? imagePickingSuccess,
+    TResult Function(ImagePickingError<T> value)? imagePickingError,
     required TResult orElse(),
   }) {
     if (profileSuccess != null) {
@@ -613,6 +685,9 @@ class _$ProfileErrorImpl<T> implements ProfileError<T> {
     required TResult Function() profileUpdateLoading,
     required TResult Function(T data) profileUpdateSuccess,
     required TResult Function(String error) profileUpdateError,
+    required TResult Function() imagePickingLoading,
+    required TResult Function(T data) imagePickingSuccess,
+    required TResult Function(String error) imagePickingError,
   }) {
     return profileError(error);
   }
@@ -627,6 +702,9 @@ class _$ProfileErrorImpl<T> implements ProfileError<T> {
     TResult? Function()? profileUpdateLoading,
     TResult? Function(T data)? profileUpdateSuccess,
     TResult? Function(String error)? profileUpdateError,
+    TResult? Function()? imagePickingLoading,
+    TResult? Function(T data)? imagePickingSuccess,
+    TResult? Function(String error)? imagePickingError,
   }) {
     return profileError?.call(error);
   }
@@ -641,6 +719,9 @@ class _$ProfileErrorImpl<T> implements ProfileError<T> {
     TResult Function()? profileUpdateLoading,
     TResult Function(T data)? profileUpdateSuccess,
     TResult Function(String error)? profileUpdateError,
+    TResult Function()? imagePickingLoading,
+    TResult Function(T data)? imagePickingSuccess,
+    TResult Function(String error)? imagePickingError,
     required TResult orElse(),
   }) {
     if (profileError != null) {
@@ -661,6 +742,9 @@ class _$ProfileErrorImpl<T> implements ProfileError<T> {
     required TResult Function(ProfileUpdateSuccess<T> value)
         profileUpdateSuccess,
     required TResult Function(ProfileUpdateError<T> value) profileUpdateError,
+    required TResult Function(ImagePickingLoading<T> value) imagePickingLoading,
+    required TResult Function(ImagePickingSuccess<T> value) imagePickingSuccess,
+    required TResult Function(ImagePickingError<T> value) imagePickingError,
   }) {
     return profileError(this);
   }
@@ -675,6 +759,9 @@ class _$ProfileErrorImpl<T> implements ProfileError<T> {
     TResult? Function(ProfileUpdateLoading<T> value)? profileUpdateLoading,
     TResult? Function(ProfileUpdateSuccess<T> value)? profileUpdateSuccess,
     TResult? Function(ProfileUpdateError<T> value)? profileUpdateError,
+    TResult? Function(ImagePickingLoading<T> value)? imagePickingLoading,
+    TResult? Function(ImagePickingSuccess<T> value)? imagePickingSuccess,
+    TResult? Function(ImagePickingError<T> value)? imagePickingError,
   }) {
     return profileError?.call(this);
   }
@@ -689,6 +776,9 @@ class _$ProfileErrorImpl<T> implements ProfileError<T> {
     TResult Function(ProfileUpdateLoading<T> value)? profileUpdateLoading,
     TResult Function(ProfileUpdateSuccess<T> value)? profileUpdateSuccess,
     TResult Function(ProfileUpdateError<T> value)? profileUpdateError,
+    TResult Function(ImagePickingLoading<T> value)? imagePickingLoading,
+    TResult Function(ImagePickingSuccess<T> value)? imagePickingSuccess,
+    TResult Function(ImagePickingError<T> value)? imagePickingError,
     required TResult orElse(),
   }) {
     if (profileError != null) {
@@ -755,6 +845,9 @@ class _$ProfileUpdateLoadingImpl<T> implements ProfileUpdateLoading<T> {
     required TResult Function() profileUpdateLoading,
     required TResult Function(T data) profileUpdateSuccess,
     required TResult Function(String error) profileUpdateError,
+    required TResult Function() imagePickingLoading,
+    required TResult Function(T data) imagePickingSuccess,
+    required TResult Function(String error) imagePickingError,
   }) {
     return profileUpdateLoading();
   }
@@ -769,6 +862,9 @@ class _$ProfileUpdateLoadingImpl<T> implements ProfileUpdateLoading<T> {
     TResult? Function()? profileUpdateLoading,
     TResult? Function(T data)? profileUpdateSuccess,
     TResult? Function(String error)? profileUpdateError,
+    TResult? Function()? imagePickingLoading,
+    TResult? Function(T data)? imagePickingSuccess,
+    TResult? Function(String error)? imagePickingError,
   }) {
     return profileUpdateLoading?.call();
   }
@@ -783,6 +879,9 @@ class _$ProfileUpdateLoadingImpl<T> implements ProfileUpdateLoading<T> {
     TResult Function()? profileUpdateLoading,
     TResult Function(T data)? profileUpdateSuccess,
     TResult Function(String error)? profileUpdateError,
+    TResult Function()? imagePickingLoading,
+    TResult Function(T data)? imagePickingSuccess,
+    TResult Function(String error)? imagePickingError,
     required TResult orElse(),
   }) {
     if (profileUpdateLoading != null) {
@@ -803,6 +902,9 @@ class _$ProfileUpdateLoadingImpl<T> implements ProfileUpdateLoading<T> {
     required TResult Function(ProfileUpdateSuccess<T> value)
         profileUpdateSuccess,
     required TResult Function(ProfileUpdateError<T> value) profileUpdateError,
+    required TResult Function(ImagePickingLoading<T> value) imagePickingLoading,
+    required TResult Function(ImagePickingSuccess<T> value) imagePickingSuccess,
+    required TResult Function(ImagePickingError<T> value) imagePickingError,
   }) {
     return profileUpdateLoading(this);
   }
@@ -817,6 +919,9 @@ class _$ProfileUpdateLoadingImpl<T> implements ProfileUpdateLoading<T> {
     TResult? Function(ProfileUpdateLoading<T> value)? profileUpdateLoading,
     TResult? Function(ProfileUpdateSuccess<T> value)? profileUpdateSuccess,
     TResult? Function(ProfileUpdateError<T> value)? profileUpdateError,
+    TResult? Function(ImagePickingLoading<T> value)? imagePickingLoading,
+    TResult? Function(ImagePickingSuccess<T> value)? imagePickingSuccess,
+    TResult? Function(ImagePickingError<T> value)? imagePickingError,
   }) {
     return profileUpdateLoading?.call(this);
   }
@@ -831,6 +936,9 @@ class _$ProfileUpdateLoadingImpl<T> implements ProfileUpdateLoading<T> {
     TResult Function(ProfileUpdateLoading<T> value)? profileUpdateLoading,
     TResult Function(ProfileUpdateSuccess<T> value)? profileUpdateSuccess,
     TResult Function(ProfileUpdateError<T> value)? profileUpdateError,
+    TResult Function(ImagePickingLoading<T> value)? imagePickingLoading,
+    TResult Function(ImagePickingSuccess<T> value)? imagePickingSuccess,
+    TResult Function(ImagePickingError<T> value)? imagePickingError,
     required TResult orElse(),
   }) {
     if (profileUpdateLoading != null) {
@@ -918,6 +1026,9 @@ class _$ProfileUpdateSuccessImpl<T> implements ProfileUpdateSuccess<T> {
     required TResult Function() profileUpdateLoading,
     required TResult Function(T data) profileUpdateSuccess,
     required TResult Function(String error) profileUpdateError,
+    required TResult Function() imagePickingLoading,
+    required TResult Function(T data) imagePickingSuccess,
+    required TResult Function(String error) imagePickingError,
   }) {
     return profileUpdateSuccess(data);
   }
@@ -932,6 +1043,9 @@ class _$ProfileUpdateSuccessImpl<T> implements ProfileUpdateSuccess<T> {
     TResult? Function()? profileUpdateLoading,
     TResult? Function(T data)? profileUpdateSuccess,
     TResult? Function(String error)? profileUpdateError,
+    TResult? Function()? imagePickingLoading,
+    TResult? Function(T data)? imagePickingSuccess,
+    TResult? Function(String error)? imagePickingError,
   }) {
     return profileUpdateSuccess?.call(data);
   }
@@ -946,6 +1060,9 @@ class _$ProfileUpdateSuccessImpl<T> implements ProfileUpdateSuccess<T> {
     TResult Function()? profileUpdateLoading,
     TResult Function(T data)? profileUpdateSuccess,
     TResult Function(String error)? profileUpdateError,
+    TResult Function()? imagePickingLoading,
+    TResult Function(T data)? imagePickingSuccess,
+    TResult Function(String error)? imagePickingError,
     required TResult orElse(),
   }) {
     if (profileUpdateSuccess != null) {
@@ -966,6 +1083,9 @@ class _$ProfileUpdateSuccessImpl<T> implements ProfileUpdateSuccess<T> {
     required TResult Function(ProfileUpdateSuccess<T> value)
         profileUpdateSuccess,
     required TResult Function(ProfileUpdateError<T> value) profileUpdateError,
+    required TResult Function(ImagePickingLoading<T> value) imagePickingLoading,
+    required TResult Function(ImagePickingSuccess<T> value) imagePickingSuccess,
+    required TResult Function(ImagePickingError<T> value) imagePickingError,
   }) {
     return profileUpdateSuccess(this);
   }
@@ -980,6 +1100,9 @@ class _$ProfileUpdateSuccessImpl<T> implements ProfileUpdateSuccess<T> {
     TResult? Function(ProfileUpdateLoading<T> value)? profileUpdateLoading,
     TResult? Function(ProfileUpdateSuccess<T> value)? profileUpdateSuccess,
     TResult? Function(ProfileUpdateError<T> value)? profileUpdateError,
+    TResult? Function(ImagePickingLoading<T> value)? imagePickingLoading,
+    TResult? Function(ImagePickingSuccess<T> value)? imagePickingSuccess,
+    TResult? Function(ImagePickingError<T> value)? imagePickingError,
   }) {
     return profileUpdateSuccess?.call(this);
   }
@@ -994,6 +1117,9 @@ class _$ProfileUpdateSuccessImpl<T> implements ProfileUpdateSuccess<T> {
     TResult Function(ProfileUpdateLoading<T> value)? profileUpdateLoading,
     TResult Function(ProfileUpdateSuccess<T> value)? profileUpdateSuccess,
     TResult Function(ProfileUpdateError<T> value)? profileUpdateError,
+    TResult Function(ImagePickingLoading<T> value)? imagePickingLoading,
+    TResult Function(ImagePickingSuccess<T> value)? imagePickingSuccess,
+    TResult Function(ImagePickingError<T> value)? imagePickingError,
     required TResult orElse(),
   }) {
     if (profileUpdateSuccess != null) {
@@ -1085,6 +1211,9 @@ class _$ProfileUpdateErrorImpl<T> implements ProfileUpdateError<T> {
     required TResult Function() profileUpdateLoading,
     required TResult Function(T data) profileUpdateSuccess,
     required TResult Function(String error) profileUpdateError,
+    required TResult Function() imagePickingLoading,
+    required TResult Function(T data) imagePickingSuccess,
+    required TResult Function(String error) imagePickingError,
   }) {
     return profileUpdateError(error);
   }
@@ -1099,6 +1228,9 @@ class _$ProfileUpdateErrorImpl<T> implements ProfileUpdateError<T> {
     TResult? Function()? profileUpdateLoading,
     TResult? Function(T data)? profileUpdateSuccess,
     TResult? Function(String error)? profileUpdateError,
+    TResult? Function()? imagePickingLoading,
+    TResult? Function(T data)? imagePickingSuccess,
+    TResult? Function(String error)? imagePickingError,
   }) {
     return profileUpdateError?.call(error);
   }
@@ -1113,6 +1245,9 @@ class _$ProfileUpdateErrorImpl<T> implements ProfileUpdateError<T> {
     TResult Function()? profileUpdateLoading,
     TResult Function(T data)? profileUpdateSuccess,
     TResult Function(String error)? profileUpdateError,
+    TResult Function()? imagePickingLoading,
+    TResult Function(T data)? imagePickingSuccess,
+    TResult Function(String error)? imagePickingError,
     required TResult orElse(),
   }) {
     if (profileUpdateError != null) {
@@ -1133,6 +1268,9 @@ class _$ProfileUpdateErrorImpl<T> implements ProfileUpdateError<T> {
     required TResult Function(ProfileUpdateSuccess<T> value)
         profileUpdateSuccess,
     required TResult Function(ProfileUpdateError<T> value) profileUpdateError,
+    required TResult Function(ImagePickingLoading<T> value) imagePickingLoading,
+    required TResult Function(ImagePickingSuccess<T> value) imagePickingSuccess,
+    required TResult Function(ImagePickingError<T> value) imagePickingError,
   }) {
     return profileUpdateError(this);
   }
@@ -1147,6 +1285,9 @@ class _$ProfileUpdateErrorImpl<T> implements ProfileUpdateError<T> {
     TResult? Function(ProfileUpdateLoading<T> value)? profileUpdateLoading,
     TResult? Function(ProfileUpdateSuccess<T> value)? profileUpdateSuccess,
     TResult? Function(ProfileUpdateError<T> value)? profileUpdateError,
+    TResult? Function(ImagePickingLoading<T> value)? imagePickingLoading,
+    TResult? Function(ImagePickingSuccess<T> value)? imagePickingSuccess,
+    TResult? Function(ImagePickingError<T> value)? imagePickingError,
   }) {
     return profileUpdateError?.call(this);
   }
@@ -1161,6 +1302,9 @@ class _$ProfileUpdateErrorImpl<T> implements ProfileUpdateError<T> {
     TResult Function(ProfileUpdateLoading<T> value)? profileUpdateLoading,
     TResult Function(ProfileUpdateSuccess<T> value)? profileUpdateSuccess,
     TResult Function(ProfileUpdateError<T> value)? profileUpdateError,
+    TResult Function(ImagePickingLoading<T> value)? imagePickingLoading,
+    TResult Function(ImagePickingSuccess<T> value)? imagePickingSuccess,
+    TResult Function(ImagePickingError<T> value)? imagePickingError,
     required TResult orElse(),
   }) {
     if (profileUpdateError != null) {
@@ -1177,5 +1321,530 @@ abstract class ProfileUpdateError<T> implements ProfileState<T> {
   String get error;
   @JsonKey(ignore: true)
   _$$ProfileUpdateErrorImplCopyWith<T, _$ProfileUpdateErrorImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ImagePickingLoadingImplCopyWith<T, $Res> {
+  factory _$$ImagePickingLoadingImplCopyWith(_$ImagePickingLoadingImpl<T> value,
+          $Res Function(_$ImagePickingLoadingImpl<T>) then) =
+      __$$ImagePickingLoadingImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$ImagePickingLoadingImplCopyWithImpl<T, $Res>
+    extends _$ProfileStateCopyWithImpl<T, $Res, _$ImagePickingLoadingImpl<T>>
+    implements _$$ImagePickingLoadingImplCopyWith<T, $Res> {
+  __$$ImagePickingLoadingImplCopyWithImpl(_$ImagePickingLoadingImpl<T> _value,
+      $Res Function(_$ImagePickingLoadingImpl<T>) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$ImagePickingLoadingImpl<T> implements ImagePickingLoading<T> {
+  const _$ImagePickingLoadingImpl();
+
+  @override
+  String toString() {
+    return 'ProfileState<$T>.imagePickingLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ImagePickingLoadingImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() profileLoading,
+    required TResult Function(T data) profileSuccess,
+    required TResult Function(String error) profileError,
+    required TResult Function() profileUpdateLoading,
+    required TResult Function(T data) profileUpdateSuccess,
+    required TResult Function(String error) profileUpdateError,
+    required TResult Function() imagePickingLoading,
+    required TResult Function(T data) imagePickingSuccess,
+    required TResult Function(String error) imagePickingError,
+  }) {
+    return imagePickingLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? profileLoading,
+    TResult? Function(T data)? profileSuccess,
+    TResult? Function(String error)? profileError,
+    TResult? Function()? profileUpdateLoading,
+    TResult? Function(T data)? profileUpdateSuccess,
+    TResult? Function(String error)? profileUpdateError,
+    TResult? Function()? imagePickingLoading,
+    TResult? Function(T data)? imagePickingSuccess,
+    TResult? Function(String error)? imagePickingError,
+  }) {
+    return imagePickingLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? profileLoading,
+    TResult Function(T data)? profileSuccess,
+    TResult Function(String error)? profileError,
+    TResult Function()? profileUpdateLoading,
+    TResult Function(T data)? profileUpdateSuccess,
+    TResult Function(String error)? profileUpdateError,
+    TResult Function()? imagePickingLoading,
+    TResult Function(T data)? imagePickingSuccess,
+    TResult Function(String error)? imagePickingError,
+    required TResult orElse(),
+  }) {
+    if (imagePickingLoading != null) {
+      return imagePickingLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(ProfileLoading<T> value) profileLoading,
+    required TResult Function(ProfileSuccess<T> value) profileSuccess,
+    required TResult Function(ProfileError<T> value) profileError,
+    required TResult Function(ProfileUpdateLoading<T> value)
+        profileUpdateLoading,
+    required TResult Function(ProfileUpdateSuccess<T> value)
+        profileUpdateSuccess,
+    required TResult Function(ProfileUpdateError<T> value) profileUpdateError,
+    required TResult Function(ImagePickingLoading<T> value) imagePickingLoading,
+    required TResult Function(ImagePickingSuccess<T> value) imagePickingSuccess,
+    required TResult Function(ImagePickingError<T> value) imagePickingError,
+  }) {
+    return imagePickingLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(ProfileLoading<T> value)? profileLoading,
+    TResult? Function(ProfileSuccess<T> value)? profileSuccess,
+    TResult? Function(ProfileError<T> value)? profileError,
+    TResult? Function(ProfileUpdateLoading<T> value)? profileUpdateLoading,
+    TResult? Function(ProfileUpdateSuccess<T> value)? profileUpdateSuccess,
+    TResult? Function(ProfileUpdateError<T> value)? profileUpdateError,
+    TResult? Function(ImagePickingLoading<T> value)? imagePickingLoading,
+    TResult? Function(ImagePickingSuccess<T> value)? imagePickingSuccess,
+    TResult? Function(ImagePickingError<T> value)? imagePickingError,
+  }) {
+    return imagePickingLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(ProfileLoading<T> value)? profileLoading,
+    TResult Function(ProfileSuccess<T> value)? profileSuccess,
+    TResult Function(ProfileError<T> value)? profileError,
+    TResult Function(ProfileUpdateLoading<T> value)? profileUpdateLoading,
+    TResult Function(ProfileUpdateSuccess<T> value)? profileUpdateSuccess,
+    TResult Function(ProfileUpdateError<T> value)? profileUpdateError,
+    TResult Function(ImagePickingLoading<T> value)? imagePickingLoading,
+    TResult Function(ImagePickingSuccess<T> value)? imagePickingSuccess,
+    TResult Function(ImagePickingError<T> value)? imagePickingError,
+    required TResult orElse(),
+  }) {
+    if (imagePickingLoading != null) {
+      return imagePickingLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ImagePickingLoading<T> implements ProfileState<T> {
+  const factory ImagePickingLoading() = _$ImagePickingLoadingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$ImagePickingSuccessImplCopyWith<T, $Res> {
+  factory _$$ImagePickingSuccessImplCopyWith(_$ImagePickingSuccessImpl<T> value,
+          $Res Function(_$ImagePickingSuccessImpl<T>) then) =
+      __$$ImagePickingSuccessImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({T data});
+}
+
+/// @nodoc
+class __$$ImagePickingSuccessImplCopyWithImpl<T, $Res>
+    extends _$ProfileStateCopyWithImpl<T, $Res, _$ImagePickingSuccessImpl<T>>
+    implements _$$ImagePickingSuccessImplCopyWith<T, $Res> {
+  __$$ImagePickingSuccessImplCopyWithImpl(_$ImagePickingSuccessImpl<T> _value,
+      $Res Function(_$ImagePickingSuccessImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? data = freezed,
+  }) {
+    return _then(_$ImagePickingSuccessImpl<T>(
+      freezed == data
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ImagePickingSuccessImpl<T> implements ImagePickingSuccess<T> {
+  const _$ImagePickingSuccessImpl(this.data);
+
+  @override
+  final T data;
+
+  @override
+  String toString() {
+    return 'ProfileState<$T>.imagePickingSuccess(data: $data)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ImagePickingSuccessImpl<T> &&
+            const DeepCollectionEquality().equals(other.data, data));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ImagePickingSuccessImplCopyWith<T, _$ImagePickingSuccessImpl<T>>
+      get copyWith => __$$ImagePickingSuccessImplCopyWithImpl<T,
+          _$ImagePickingSuccessImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() profileLoading,
+    required TResult Function(T data) profileSuccess,
+    required TResult Function(String error) profileError,
+    required TResult Function() profileUpdateLoading,
+    required TResult Function(T data) profileUpdateSuccess,
+    required TResult Function(String error) profileUpdateError,
+    required TResult Function() imagePickingLoading,
+    required TResult Function(T data) imagePickingSuccess,
+    required TResult Function(String error) imagePickingError,
+  }) {
+    return imagePickingSuccess(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? profileLoading,
+    TResult? Function(T data)? profileSuccess,
+    TResult? Function(String error)? profileError,
+    TResult? Function()? profileUpdateLoading,
+    TResult? Function(T data)? profileUpdateSuccess,
+    TResult? Function(String error)? profileUpdateError,
+    TResult? Function()? imagePickingLoading,
+    TResult? Function(T data)? imagePickingSuccess,
+    TResult? Function(String error)? imagePickingError,
+  }) {
+    return imagePickingSuccess?.call(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? profileLoading,
+    TResult Function(T data)? profileSuccess,
+    TResult Function(String error)? profileError,
+    TResult Function()? profileUpdateLoading,
+    TResult Function(T data)? profileUpdateSuccess,
+    TResult Function(String error)? profileUpdateError,
+    TResult Function()? imagePickingLoading,
+    TResult Function(T data)? imagePickingSuccess,
+    TResult Function(String error)? imagePickingError,
+    required TResult orElse(),
+  }) {
+    if (imagePickingSuccess != null) {
+      return imagePickingSuccess(data);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(ProfileLoading<T> value) profileLoading,
+    required TResult Function(ProfileSuccess<T> value) profileSuccess,
+    required TResult Function(ProfileError<T> value) profileError,
+    required TResult Function(ProfileUpdateLoading<T> value)
+        profileUpdateLoading,
+    required TResult Function(ProfileUpdateSuccess<T> value)
+        profileUpdateSuccess,
+    required TResult Function(ProfileUpdateError<T> value) profileUpdateError,
+    required TResult Function(ImagePickingLoading<T> value) imagePickingLoading,
+    required TResult Function(ImagePickingSuccess<T> value) imagePickingSuccess,
+    required TResult Function(ImagePickingError<T> value) imagePickingError,
+  }) {
+    return imagePickingSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(ProfileLoading<T> value)? profileLoading,
+    TResult? Function(ProfileSuccess<T> value)? profileSuccess,
+    TResult? Function(ProfileError<T> value)? profileError,
+    TResult? Function(ProfileUpdateLoading<T> value)? profileUpdateLoading,
+    TResult? Function(ProfileUpdateSuccess<T> value)? profileUpdateSuccess,
+    TResult? Function(ProfileUpdateError<T> value)? profileUpdateError,
+    TResult? Function(ImagePickingLoading<T> value)? imagePickingLoading,
+    TResult? Function(ImagePickingSuccess<T> value)? imagePickingSuccess,
+    TResult? Function(ImagePickingError<T> value)? imagePickingError,
+  }) {
+    return imagePickingSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(ProfileLoading<T> value)? profileLoading,
+    TResult Function(ProfileSuccess<T> value)? profileSuccess,
+    TResult Function(ProfileError<T> value)? profileError,
+    TResult Function(ProfileUpdateLoading<T> value)? profileUpdateLoading,
+    TResult Function(ProfileUpdateSuccess<T> value)? profileUpdateSuccess,
+    TResult Function(ProfileUpdateError<T> value)? profileUpdateError,
+    TResult Function(ImagePickingLoading<T> value)? imagePickingLoading,
+    TResult Function(ImagePickingSuccess<T> value)? imagePickingSuccess,
+    TResult Function(ImagePickingError<T> value)? imagePickingError,
+    required TResult orElse(),
+  }) {
+    if (imagePickingSuccess != null) {
+      return imagePickingSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ImagePickingSuccess<T> implements ProfileState<T> {
+  const factory ImagePickingSuccess(final T data) =
+      _$ImagePickingSuccessImpl<T>;
+
+  T get data;
+  @JsonKey(ignore: true)
+  _$$ImagePickingSuccessImplCopyWith<T, _$ImagePickingSuccessImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ImagePickingErrorImplCopyWith<T, $Res> {
+  factory _$$ImagePickingErrorImplCopyWith(_$ImagePickingErrorImpl<T> value,
+          $Res Function(_$ImagePickingErrorImpl<T>) then) =
+      __$$ImagePickingErrorImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({String error});
+}
+
+/// @nodoc
+class __$$ImagePickingErrorImplCopyWithImpl<T, $Res>
+    extends _$ProfileStateCopyWithImpl<T, $Res, _$ImagePickingErrorImpl<T>>
+    implements _$$ImagePickingErrorImplCopyWith<T, $Res> {
+  __$$ImagePickingErrorImplCopyWithImpl(_$ImagePickingErrorImpl<T> _value,
+      $Res Function(_$ImagePickingErrorImpl<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$ImagePickingErrorImpl<T>(
+      error: null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$ImagePickingErrorImpl<T> implements ImagePickingError<T> {
+  const _$ImagePickingErrorImpl({required this.error});
+
+  @override
+  final String error;
+
+  @override
+  String toString() {
+    return 'ProfileState<$T>.imagePickingError(error: $error)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$ImagePickingErrorImpl<T> &&
+            (identical(other.error, error) || other.error == error));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, error);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$ImagePickingErrorImplCopyWith<T, _$ImagePickingErrorImpl<T>>
+      get copyWith =>
+          __$$ImagePickingErrorImplCopyWithImpl<T, _$ImagePickingErrorImpl<T>>(
+              this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() profileLoading,
+    required TResult Function(T data) profileSuccess,
+    required TResult Function(String error) profileError,
+    required TResult Function() profileUpdateLoading,
+    required TResult Function(T data) profileUpdateSuccess,
+    required TResult Function(String error) profileUpdateError,
+    required TResult Function() imagePickingLoading,
+    required TResult Function(T data) imagePickingSuccess,
+    required TResult Function(String error) imagePickingError,
+  }) {
+    return imagePickingError(error);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? profileLoading,
+    TResult? Function(T data)? profileSuccess,
+    TResult? Function(String error)? profileError,
+    TResult? Function()? profileUpdateLoading,
+    TResult? Function(T data)? profileUpdateSuccess,
+    TResult? Function(String error)? profileUpdateError,
+    TResult? Function()? imagePickingLoading,
+    TResult? Function(T data)? imagePickingSuccess,
+    TResult? Function(String error)? imagePickingError,
+  }) {
+    return imagePickingError?.call(error);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? profileLoading,
+    TResult Function(T data)? profileSuccess,
+    TResult Function(String error)? profileError,
+    TResult Function()? profileUpdateLoading,
+    TResult Function(T data)? profileUpdateSuccess,
+    TResult Function(String error)? profileUpdateError,
+    TResult Function()? imagePickingLoading,
+    TResult Function(T data)? imagePickingSuccess,
+    TResult Function(String error)? imagePickingError,
+    required TResult orElse(),
+  }) {
+    if (imagePickingError != null) {
+      return imagePickingError(error);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(ProfileLoading<T> value) profileLoading,
+    required TResult Function(ProfileSuccess<T> value) profileSuccess,
+    required TResult Function(ProfileError<T> value) profileError,
+    required TResult Function(ProfileUpdateLoading<T> value)
+        profileUpdateLoading,
+    required TResult Function(ProfileUpdateSuccess<T> value)
+        profileUpdateSuccess,
+    required TResult Function(ProfileUpdateError<T> value) profileUpdateError,
+    required TResult Function(ImagePickingLoading<T> value) imagePickingLoading,
+    required TResult Function(ImagePickingSuccess<T> value) imagePickingSuccess,
+    required TResult Function(ImagePickingError<T> value) imagePickingError,
+  }) {
+    return imagePickingError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(ProfileLoading<T> value)? profileLoading,
+    TResult? Function(ProfileSuccess<T> value)? profileSuccess,
+    TResult? Function(ProfileError<T> value)? profileError,
+    TResult? Function(ProfileUpdateLoading<T> value)? profileUpdateLoading,
+    TResult? Function(ProfileUpdateSuccess<T> value)? profileUpdateSuccess,
+    TResult? Function(ProfileUpdateError<T> value)? profileUpdateError,
+    TResult? Function(ImagePickingLoading<T> value)? imagePickingLoading,
+    TResult? Function(ImagePickingSuccess<T> value)? imagePickingSuccess,
+    TResult? Function(ImagePickingError<T> value)? imagePickingError,
+  }) {
+    return imagePickingError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(ProfileLoading<T> value)? profileLoading,
+    TResult Function(ProfileSuccess<T> value)? profileSuccess,
+    TResult Function(ProfileError<T> value)? profileError,
+    TResult Function(ProfileUpdateLoading<T> value)? profileUpdateLoading,
+    TResult Function(ProfileUpdateSuccess<T> value)? profileUpdateSuccess,
+    TResult Function(ProfileUpdateError<T> value)? profileUpdateError,
+    TResult Function(ImagePickingLoading<T> value)? imagePickingLoading,
+    TResult Function(ImagePickingSuccess<T> value)? imagePickingSuccess,
+    TResult Function(ImagePickingError<T> value)? imagePickingError,
+    required TResult orElse(),
+  }) {
+    if (imagePickingError != null) {
+      return imagePickingError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ImagePickingError<T> implements ProfileState<T> {
+  const factory ImagePickingError({required final String error}) =
+      _$ImagePickingErrorImpl<T>;
+
+  String get error;
+  @JsonKey(ignore: true)
+  _$$ImagePickingErrorImplCopyWith<T, _$ImagePickingErrorImpl<T>>
       get copyWith => throw _privateConstructorUsedError;
 }

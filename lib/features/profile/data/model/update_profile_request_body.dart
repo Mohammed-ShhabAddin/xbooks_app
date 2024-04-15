@@ -11,7 +11,7 @@ part 'update_profile_request_body.g.dart';
 class UpdateProfileRequestBody {
   final String name;
 
-  @JsonKey(name: 'image')
+  // @JsonKey(name: 'image')
   final List<MultipartFile> files;
   final String address;
   final String city;

@@ -6,7 +6,6 @@ import 'package:xbooks_store/core/helper/extension.dart';
 import 'package:xbooks_store/core/routing/routes.dart';
 import 'package:xbooks_store/core/theming/app_colors.dart';
 import 'package:xbooks_store/core/theming/styles.dart';
-import 'package:xbooks_store/features/profile/data/model/profile_model.dart';
 import 'package:xbooks_store/features/profile/logic/profile_cubit.dart';
 import 'package:xbooks_store/features/profile/logic/profile_state.dart';
 import 'package:xbooks_store/features/profile/view/widgets/custom_profile_form_field.dart';
@@ -21,7 +20,9 @@ class ProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => getIt<ProfileCubit>()..emitShowProfileStates(),
-      child: BlocBuilder<ProfileCubit, ProfileState<Profile>>(
+      child: BlocBuilder<ProfileCubit, ProfileState>(
+        //      child: BlocBuilder<ProfileCubit, ProfileState<Profile>>(
+
         builder: (context, state) {
           return state.maybeWhen(
             profileLoading: () => Center(
@@ -89,7 +90,8 @@ class ProfileScreen extends StatelessWidget {
                       ),
                       CustomElevatedButton(
                         onPressed: () {
-                          context.pushNamed(Routes.editingProfileScreen);
+                          // context.pushNamed(Routes.editingProfileScreen);
+                          context.pushNamed(Routes.updateProfileScreen);
                         },
                         width: MediaQuery.of(context).size.width * 0.92,
                         hight: 50.h,
